@@ -1,0 +1,347 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: white;
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.menu{
+    display: none;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-top: auto;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.closed{
+    display: none !important;
+}
+
+nav ul li a:hover{
+    color: #000;
+    font-weight: 800;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav ul li {
+    flex-direction: row;
+    float: left;
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: gray;
+    cursor: pointer;
+}
+
+nav ul li a{
+    padding: 10px;
+}
+
+nav ul li span {
+    font-weight: 800;
+    color: black;
+}
+
+main {
+    height: calc(100% - 56px);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+main .hero-image {
+    background-image: url(./img/background.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+
+main .hero-image h1 {
+    top: 50%;
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-left: 50px;
+    color: #FFF;
+    position: relative;
+    text-align: inherit;
+}
+
+main .hero-image p{
+    font-size: 1.4rem;
+    text-align: inherit;
+    opacity: 0.6;
+    color: #FFF;
+    position: relative;
+    top: 60%;
+    margin-left: 50px;
+    text-transform: uppercase;
+    margin-top: -66px;
+}
+
+.content{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.md-04{
+    text-align: center;
+}
+
+.md-04 img{
+    width: 20%;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: #f6f6f6;
+    display: flex;
+    bottom: 0;
+    position: relative;
+    height: 80px;
+    align-items: center;
+}
+
+footer .social-media{
+    margin-left: 50px;
+}
+
+.social-media img{
+    height: auto;
+    width: 230px;
+    cursor: pointer;
+}
+
+footer p{
+    margin-left: 100px;
+    font-weight: 800;
+    color: #000;
+    opacity: 1;
+}
+
+footer .texto p{
+    font-size: 14px;
+    margin-left: 20px;
+    opacity: 0.7;
+    font-weight: 100;
+    margin-top: 17px;
+}
+
+footer .copyright{
+    display: inline-flex;
+}
+
+.btn-top button{
+    display: none;
+}
+
+@media (max-width: 1205px) {
+    .md-04 img{
+        width: 45%;
+    }
+
+    footer .social-media{
+        position: relative;
+    }
+
+    footer{
+        background-color: #FFF;
+    }
+
+    footer .copyright p{
+        margin-left: 30px;
+    }
+
+    footer p{
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (max-width: 596px) {
+    main .hero-image {
+        left: 0;
+    }
+
+    nav{
+        justify-content: flex-start;
+    }
+
+    .menu {
+        width: 80px;
+        height: 56px;
+        background-color: black;
+        display: block;
+        position: fixed;
+        top: 0;
+        border: none;
+    }
+
+    nav button{
+        width: 80px;
+        height: 56px;
+        background-color: black;
+        top: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav button .menu-icon{
+        color: white;
+        margin-top: auto;
+    }
+
+    .logo img{
+        margin-left: 100px;
+        position: relative;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .menu-vertical{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 56px;
+        left: 0;
+        background-color: white;
+        z-index: 2;
+        float: right;
+        position: fixed;
+        width: 100%;
+    }
+    
+    .menu-vertical ul{
+        list-style: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .menu-vertical ul li{
+        flex-direction: row;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: gray;
+        float: inherit;
+        cursor: pointer;
+    }
+    
+    .menu-vertical ul li:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    main .hero-image{
+        float: left;
+    }
+
+    .md-04 img{
+        width: 80%;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        margin-right: 0;
+    }
+
+    footer{
+        background-color: #FFF;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }   
+
+    footer .social-media{
+        margin-left: 0 !important;
+        text-align: center;
+        width: 90%;
+    }
+
+    footer .social-media img{
+        background-color: #7FDBD4;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 80%;
+    }
+
+    
+    footer .copyright p{
+        margin-left: 0;
+    }
+
+    
+    footer .texto p{
+        margin-left: 0;
+        font-weight: 100;
+        margin-top: -15px;
+    }
+
+    footer .copyright{
+        display: block;
+        width: 50%;
+    }
+
+    footer .footer{
+        display:flex;
+        width: 80%;
+    }
+
+    .btn-top{
+        width: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-top button{
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #707070;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        background-color: #333333;
+        color:#707070;
+        font-weight: 800;
+        font-size: 17px;
+    }
+
+} 
